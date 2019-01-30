@@ -78,6 +78,8 @@ Lastly, if there are no division/multiplication left we perform the first additi
 
 
 
+
+
 And, that's a wrap. The biggest theme in this code implementation is that in general you also need to weigh your own trade-offs, between code simplicity, readability, and reusability and adaptability. The operation with two .pop() elements assigned back to the original list is a quite adaptable structure but formatNum can be very specific to match the constraints of the challenge. Naming convention and choice to maximize readability is important and taking advantage of built-in functions, for lists, strings etc., is essential to making your code have the right blend of efficiency. In addition, a good base structure to main functions such as calculator() and nextOperation() allows you to extend its functionality later on to include exception cases or new types of inputs (such as exponents or even parentheses here).
 
 We don't touch on computational complexity in this article because we're focusing on an intermediate to beginners programming level. But for bigger data sets, optimizing run time efficiency is also important. In order to optimize runtime, minimizing the number and nesting of loops, it is often necessary to add code that is less interpretable and concise. 
