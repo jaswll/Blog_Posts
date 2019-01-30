@@ -1,4 +1,4 @@
-Programming 101, Efficient versus Inefficient Coding Structure in Python
+## Programming 101, Efficient versus Inefficient Coding Structure in Python
 
 by Jason Leung
 
@@ -7,7 +7,8 @@ by Jason Leung
 ​	As an intermediate or beginning level programmer, we are still learning the ins and outs and best practices of our 1st, 2nd or 3rd programming language. But no matter what the language, one focus should be learning and practicing efficient code. What does efficient in this context mean? Here are 3 general principles/metrics that add up to what it might mean to be efficient, and a concrete coding challenge in Python as an example. The challenge is from https://www.codewars.com/kata/calculator, thank you to its author [obrok](https://www.codewars.com/users/obrok), and has this prompt:
 
 ```
-Challenge: Create a simple calculator that given a string of operators (+ - * and /) and numbers separated by spaces returns the value of that expression
+Challenge: Create a simple calculator that given a string of operators (+ - * and /)
+and numbers separated by spaces returns the value of that expression
 ```
 
 
@@ -83,7 +84,7 @@ And, that's a wrap. The biggest theme in this code implementation is that in gen
 
 
 
-Secondary Code and Testing:
+<i>Secondary Code and Testing:</i>
 
 ```
 def formatNum(s):
