@@ -51,8 +51,6 @@ NextOperation is the meat and potatoes of this challenge. It needs to determine 
 
 If the next division is earlier in the list than the next multiplication, division should be performed and vice versa. In each if statement, we use the handy list function .pop() which takes an index value and both removes that index's item and returns it, efficiently accomplishing both retrieving the 2 numbers for the actual division and starts to reduce the output list. The nextindex function uses the list function .index() to step through  the list starting with its first element and stop and return the first index with the specified value. In terms of computational complexity, this is good because it only does the minimum iterations (not counting skipping elements that are numbers) necessary for us to get the next operation and be readable. The one hidden action here is that the index with the division string element is also actually replaced by assigning to ( lis[index_div-1] ). It is now at index minus 1 because the element 'behind' it was removed by .pop(). This is not readable but is very concise, the result of the division is added in place of the division sign and this gives this iteration's desired output list.
 
-Finally, if there are no division/multiplication left we perform the first addition/subtraction, with the exact same structure. Luckily for this challenge, there are no exceptions or error cases that need to be coded up because our range of possible input strings is limited. If there is a division by zero or badly formatted input string nextOperation will just default to printing 'format error'.
-
 ```python
 def nextOperation(lis) :
     index_div = nextindex(lis,'/')
@@ -75,6 +73,10 @@ def nextIndex(lis, operation) :
     try : return lis.index(operation)
     except : return len(lis)
 ```
+
+Lastly, if there are no division/multiplication left we perform the first addition/subtraction, with the exact same structure. Luckily for this challenge, there are no exceptions or error cases that need to be coded up because our range of possible input strings is limited. If there is a division by zero or badly formatted input string nextOperation will just default to printing 'format error'.
+
+
 
 And, that's a wrap. The biggest theme in this code implementation is that in general you also need to weigh your own trade-offs, between code simplicity, readability, and reusability and adaptability. The operation with two .pop() elements assigned back to the original list is a quite adaptable structure but formatNum can be very specific to match the constraints of the challenge. Naming convention and choice to maximize readability is important and taking advantage of built-in functions, for lists, strings etc., is essential to making your code have the right blend of efficiency. In addition, a good base structure to main functions such as calculator() and nextOperation() allows you to extend its functionality later on to include exception cases or new types of inputs (such as exponents or even parentheses here).
 
