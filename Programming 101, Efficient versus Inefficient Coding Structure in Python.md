@@ -4,20 +4,20 @@ by Jason Leung
 
 
 
-​	As an intermediate or beginning level programmer, we are still learning the ins and outs and best practices of our 1st, 2nd or 3rd programming language. But no matter what the language, one focus should be learning and practicing efficient code. What does efficient in this context mean? Here are 3 general principles/metrics that add up to what it might mean to be efficient, and a concrete coding challenge in Python as an example. The challenge is from https://www.codewars.com/kata/calculator, thank you to its author [obrok](https://www.codewars.com/users/obrok), and has this prompt:
-
-```
-Challenge: Create a simple calculator that given a string of operators (+ - * and /)
-and numbers separated by spaces returns the value of that expression
-```
-
-
+​	As an intermediate or beginning level programmer, we are still learning the ins and outs and best practices of our 1st, 2nd or 3rd programming language. But no matter what the language, one focus should be learning and practicing efficient code. What does efficient in this context mean? Here are 3 general principles/metrics that add up to what it might mean to be efficient, and a concrete coding challenge in Python as an example. 
 
 1. Code should be simple and concise. Every word of the code should be necessary and as much as possible straightforward, both in control flow and in looping behavior/iterations.
 2. Code should be readable/interpretable. This sometimes clashes with principle one as compressing code often makes shorthand tricks and cool functions harder for a reader to follow. A reader with basic knowledge of the programming language should be able to follow the flow and purpose of each section of code.
 3. One core feature of code in general is its reusability, both between parts of a project and across a programming career. Whenever you can reuse functions, sections and lines of code, which you've already made more efficient, go out of your way to do so! In the long run, it will usually save you time and make the overall code simpler and more readable. Make copy and paste your best friend.
 
 
+
+The challenge is from https://www.codewars.com/kata/calculator, thank you to its author [obrok](https://www.codewars.com/users/obrok), and has this prompt:
+
+```
+Challenge: Create a simple calculator that given a string of operators (+ - * and /)
+and numbers separated by spaces returns the value of that expression
+```
 
 ​	Here's how these three efficiency principles apply to the relatively straightforward Calculator challenge. This problem is purposefully simple so it is easier to follow efficiency practices start to finish.  
 
