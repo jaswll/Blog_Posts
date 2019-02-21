@@ -27,7 +27,8 @@ The main function is short and sweet. It takes advantage of the python string fu
 def calculator(string) :
     lis = string.split(' ')
     lis = [formatNum(x) for x in lis]
-    while len(lis) > 1 : lis = NextOperation(lis)
+    while len(lis) > 1 :
+        lis = nextOperation(lis)
     return lis[0]
 ```
 
@@ -38,7 +39,7 @@ It is helpful when looking at efficiency to scheme up the desired output at each
 ```python
 test1 = '2 + 3 * 4 / 6'
 
-Every list returned by NextOperation:
+Every list returned by nextOperation:
 [2.0, '+', 3.0, '*', 4.0, '/', 6.0]
 [2.0, '+', 12.0, '/', 6.0]
 [2.0, '+', 2.0]
@@ -53,15 +54,15 @@ If the next division is earlier in the list than the next multiplication, divisi
 
 ```python
 def nextOperation(lis) :
-    index_div = nextindex(lis,'/')
-    index_mult = nextindex(lis,'*')
+    index_div = nextIndex(lis,'/')
+    index_mult = nextIndex(lis,'*')
     if index_div < index_mult :
         lis[index_div-1] = lis.pop(index_div-1) / lis.pop(index_div)
     elif index_mult < index_div :
         lis[index_mult-1] = lis.pop(index_mult-1) * lis.pop(index_mult)
     else : 
-        index_subtract = nextindex(lis,'-')
-        index_add = nextindex(lis,'+')
+        index_subtract = nextIndex(lis,'-')
+        index_add = nextIndex(lis,'+')
         if index_subtract < index_add :
             lis[index_subtract-1] = lis.pop(index_subtract-1) - lis.pop(index_subtract)
         elif index_add < index_subtract :
@@ -98,7 +99,7 @@ def formatNum(s):
 test = '2 - 3 * 4 - 6 * 2 / 2 + 3 * 4 - 6'
 calculator(test)
 
-Every list returned by NextOperation:
+Every list returned by nextOperation:
 [2.0, '-', 12.0, '-', 6.0, '*', 2.0, '/', 2.0, '+', 3.0, '*', 4.0, '-', 6.0]
 [2.0, '-', 12.0, '-', 12.0, '/', 2.0, '+', 3.0, '*', 4.0, '-', 6.0]
 [2.0, '-', 12.0, '-', 6.0, '+', 3.0, '*', 4.0, '-', 6.0]
